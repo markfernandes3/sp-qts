@@ -1,0 +1,5 @@
+int radius = 10 ;
+float PI = 3.14 ;
+char ch = 'R' ;
+char name = "Roland" ;
+# break ;
