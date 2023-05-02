@@ -1,0 +1,20 @@
+%{
+#include<stdio.h>
+int opd=0;
+int opr=0;
+%}
+%%
+[a-z] {opd++;}
+[0-9] {opd++;}
+[\+\-\*\/] {opr++;}
+%%
+int yywrap()
+{
+return 1;
+}
+main()
+{
+printf("Enter the string.. at end press ^d\n");
+yylex();
+printf("No of operands=%d\nNo of operators=%d\n",opd,opr);
+}
